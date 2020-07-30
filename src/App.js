@@ -9,6 +9,7 @@ import IntroAboutAI from "./components/IntroAboutAI";
 import List from "./components/Common/List";
 import NextEvent from "./components/NextEvent";
 import AllEvents from "./components/AllEvents";
+import Organizer from "./components/Organizer";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
         />
         <NextEvent />
         <AllEvents />
+        <Organizer />
       </AppWrapper>
       <Footer />
       <GlobalStyle />
@@ -58,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,5 +70,7 @@ const GlobalStyle = createGlobalStyle`
 const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  max-width: 1300px;
+  min-width: 200px;
+  padding: 20px;
 `;

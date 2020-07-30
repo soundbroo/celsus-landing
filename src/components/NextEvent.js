@@ -155,8 +155,10 @@ const Speakers = styled.div`
 
   > div:last-child {
     display: flex;
-    > div:not(:last-child) {
-      margin-right: 26px;
+    flex-wrap: wrap;
+
+    > div {
+      margin: 12px;
     }
   }
 `;
