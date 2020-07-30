@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     background-color: #0b1e2e;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
   }
 
