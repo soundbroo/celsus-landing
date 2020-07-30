@@ -30,7 +30,7 @@ export default AllEvents;
 const AllEventsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 120px;
+  margin-top: 108px;
 `;
 
 const Title = styled.div`

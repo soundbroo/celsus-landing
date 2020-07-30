@@ -8,7 +8,7 @@ const List = ({ children, invert, title, items, roundStyle }) => (
     <Title>{title}</Title>
     <ListItems>
       {items.map((el, index) => (
-        <ListItem key={index}>
+        <ListItem key={index} round={roundStyle}>
           <img
             src={roundStyle ? ListItemRoundIcon : ListItemCheckIcon}
             alt="item"
@@ -25,6 +25,10 @@ export default List;
 const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1023px) {
+    padding: 0 20px;
+  }
 `;
 
 const ListItems = styled.div`
@@ -38,12 +42,32 @@ const ListItem = styled.div`
   margin: 32px 0px;
   margin-right: 60px;
   max-width: 500px;
+
+  @media (max-width: 1023px) {
+    width: 50%;
+    margin-right: 0px;
+  }
+
   > div {
     font-size: 24px;
     line-height: 140%;
     color: #fff;
     max-width: 400px;
     margin-left: 40px;
+
+    @media (max-width: 1023px) {
+      font-size: 10px;
+      margin-left: 6px;
+      align-self: ${({ round }) => (!round ? "auto" : "baseline")};
+    }
+  }
+
+  > img {
+    @media (max-width: 1023px) {
+      width: ${({ round }) => (!round ? "48px" : "14px")};
+      height: ${({ round }) => (!round ? "48px" : "14px")};
+      align-self: ${({ round }) => (!round ? "auto" : "baseline")};
+    }
   }
 `;
 
@@ -54,4 +78,9 @@ const Title = styled.div`
   letter-spacing: -0.03em;
   color: #fff;
   margin: 134px 0 102px 0;
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+    margin: 72px 0 0 0;
+  }
 `;

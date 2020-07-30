@@ -8,15 +8,15 @@ const IntroPlanIcons = () => (
   <PlanIconsWrapper>
     <PlanItem>
       <img src={IntroTrendsIcon} alt="trends" />
-      {/* <span>Тренды сферы</span> */}
+      <span>Тренды сферы</span>
     </PlanItem>
     <PlanItem>
       <img src={IntroExpertsIcon} alt="trends" />
-      {/* <span>Эксперты отрасли</span> */}
+      <span>Эксперты отрасли</span>
     </PlanItem>
     <PlanItem>
       <img src={IntroUsecasesIcon} alt="trends" />
-      {/* <span>Кейсы применения</span> */}
+      <span>Кейсы применения</span>
     </PlanItem>
   </PlanIconsWrapper>
 );
@@ -27,12 +27,47 @@ const PlanIconsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 46px;
+  margin-top: 150px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1023px) {
+    margin-top: 56px;
+  }
+
+  @media (max-width: 780px) {
+    justify-content: center;
+  }
 `;
 
 const PlanItem = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 210px;
+
+  @media (max-width: 780px) {
+    height: 160px;
+    margin: 20px;
+  }
+
+  @media (max-width: 330px) {
+    margin: 10px;
+  }
+
+  > img {
+    @media (max-width: 780px) {
+      width: 120px;
+    }
+  }
+
+  > span {
+    font-size: 24px;
+    line-height: 140%;
+    color: #ffffff;
+
+    @media (max-width: 780px) {
+      font-size: 14px;
+    }
+  }
 `;

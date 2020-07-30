@@ -28,6 +28,11 @@ const IntroAboutAIWrapper = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 150px;
+
+  @media (max-width: 1023px) {
+    margin-top: 64px;
+    padding: 0 20px;
+  }
 `;
 
 const AboutText = styled.div`
@@ -35,6 +40,10 @@ const AboutText = styled.div`
   font-size: 40px;
   line-height: 140%;
   color: #fff;
+
+  @media (max-width: 1023px) {
+    font-size: 18px;
+  }
 `;
 
 const AboutCard = styled.div`
@@ -47,9 +56,26 @@ const AboutCard = styled.div`
   max-width: 1075px;
   margin-top: 90px;
 
+  @media (max-width: 1023px) {
+    margin-top: 32px;
+    padding: 16px;
+  }
+
+  > img {
+    @media (max-width: 1023px) {
+      align-self: baseline;
+      width: 32px;
+    }
+  }
+
   > div {
     font-size: 24px;
     line-height: 140%;
     margin-left: 40px;
+
+    @media (max-width: 1023px) {
+      font-size: 14px;
+      margin-left: 16px;
+    }
   }
 `;

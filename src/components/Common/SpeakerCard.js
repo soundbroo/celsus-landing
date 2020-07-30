@@ -31,6 +31,7 @@ const SpeakerCardWrapper = styled.div`
   background: #253c50;
   border-radius: 16px;
   max-width: 548px;
+  margin-bottom: 12px;
 `;
 
 const SpeakerInfo = styled.div`

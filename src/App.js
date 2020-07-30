@@ -62,10 +62,11 @@ const GlobalStyle = createGlobalStyle`
     background-color: #0b1e2e;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
+    width: 100%;
   }
 
   #root {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,37 +74,49 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-position-x: 24px, 190px;
     background-position-y: 1210px, 6410px;
+    overflow-x: hidden;
   }
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 1300px;
   min-width: 200px;
   padding: 20px 0;
-  margin: 0 20px;
   border-left: 0.65px solid #ffffff24;
   border-right: 0.65px solid #ffffff24;
+  overflow-x: hidden;
   z-index: 2;
 `;
 
 const BackgroundLines = styled.div`
   position: fixed;
-  width: 1300px;
+  width: 100%;
+  max-width: 1300px;
   height: 100vh;
   border-left: 0.65px solid #ffffff24;
   border-right: 0.65px solid #ffffff24;
   margin-left: -200px;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 const BackgroundCenterLines = styled.div`
   position: fixed;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   height: 100vh;
   border-left: 0.65px solid #ffffff24;
   border-right: 0.65px solid #ffffff24;
   z-index: 1;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 const BackgroundCenterLine = styled.div`
@@ -112,4 +125,8 @@ const BackgroundCenterLine = styled.div`
   height: 100vh;
   border-left: 0.65px solid #ffffff24;
   z-index: 1;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;

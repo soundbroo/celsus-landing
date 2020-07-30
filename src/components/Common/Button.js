@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ children, invert, transparent, small }) => (
-  <ButtonWrapper invert={invert} transparent={transparent} small={small}>
+const Button = ({ children, invert, transparent, small, mobileFullWidth }) => (
+  <ButtonWrapper
+    invert={invert}
+    transparent={transparent}
+    small={small}
+    mobileFullWidth={mobileFullWidth}
+  >
     {children}
   </ButtonWrapper>
 );
@@ -25,4 +30,11 @@ const ButtonWrapper = styled.div`
   font-size: 20px;
   line-height: 140%;
   cursor: pointer;
+
+  @media (max-width: 1023px) {
+    width: ${({ mobileFullWidth }) =>
+      mobileFullWidth ? "calc(100% - 60px)" : "fit-content"};
+    justify-content: center;
+    padding: 16px 32px;
+  }
 `;

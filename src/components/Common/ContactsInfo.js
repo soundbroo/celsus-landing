@@ -27,6 +27,20 @@ const ContactsInfoWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 46px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+
+    > div:first-child {
+      > img {
+        margin: 0 20px 20px 20px;
+        width: 112px;
+        margin-top: 0;
+      }
+    }
+  }
 `;
 
 const Contacts = styled.div`
@@ -37,11 +51,19 @@ const Contacts = styled.div`
   > div {
     margin: 0 28px;
 
+    @media (max-width: 1023px) {
+      margin: 0 20px;
+    }
+
     > div:first-child {
       color: #fff;
       font-weight: normal;
       font-size: 14px;
       line-height: 140%;
+
+      @media (max-width: 1023px) {
+        font-size: 12px;
+      }
     }
 
     > div:last-child {
@@ -49,6 +71,10 @@ const Contacts = styled.div`
       font-weight: bold;
       font-size: 20px;
       line-height: 140%;
+
+      @media (max-width: 1023px) {
+        font-size: 14px;
+      }
     }
   }
 `;
