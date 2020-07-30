@@ -15,6 +15,7 @@ const Intro = () => (
         <Button invert>Программа</Button>
       </Buttons>
     </TextWithButtons>
+    <Background src={Bg} alt="bg" />
   </IntroWrapper>
 );
 
@@ -25,13 +26,26 @@ const IntroWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 46px;
-  background-image: url(${Bg});
+  /* background-image: url(${Bg});
   background-position-x: right;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+
+  /* background-position-x: 32%;
+    background-position-y: inherit;
+    background-size: 100%;
+    height: 660px; */
 `;
 
-const TextWithButtons = styled.div``;
+const TextWithButtons = styled.div`
+  z-index: 2;
+`;
+
+const Background = styled.img`
+  z-index: 1;
+  margin-left: -236px;
+  width: 72vw;
+`;
 
 const TitleText = styled.div`
   max-width: 600px;

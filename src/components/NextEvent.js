@@ -85,7 +85,7 @@ const Date = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-right: 64px;
+  margin-right: 106px;
   margin-top: -50px;
   color: #ffffff;
   align-self: flex-start;
@@ -157,8 +157,8 @@ const Speakers = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    > div {
-      margin: 12px;
+    > div:first-child {
+      margin-right: 12px;
     }
   }
 `;

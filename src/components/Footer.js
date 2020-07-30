@@ -44,6 +44,7 @@ export default Footer;
 const FooterWrapper = styled.div`
   background: #102537;
   width: 100%;
+  z-index: 2;
 `;
 
 const FooterBlockWrapper = styled.div`

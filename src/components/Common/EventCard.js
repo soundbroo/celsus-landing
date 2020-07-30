@@ -53,6 +53,7 @@ const EventCardWrapper = styled.div`
   border-radius: 16px;
   padding: 48px 56px;
   margin-bottom: 12px;
+  max-width: 1087px;
 `;
 
 const Avatar = styled.div`

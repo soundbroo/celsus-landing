@@ -10,11 +10,16 @@ import List from "./components/Common/List";
 import NextEvent from "./components/NextEvent";
 import AllEvents from "./components/AllEvents";
 import Organizer from "./components/Organizer";
+import BgPoligons from "./images/BgPoligons.svg";
+import BgPoligon from "./images/BgPoligon.svg";
 
 const App = () => {
   return (
     <>
-      <AppWrapper>
+      <BackgroundLines />
+      <BackgroundCenterLines />
+      <BackgroundCenterLine />
+      <ContentWrapper>
         <Header />
         <Intro />
         <IntroPlanIcons />
@@ -43,7 +48,7 @@ const App = () => {
         <NextEvent />
         <AllEvents />
         <Organizer />
-      </AppWrapper>
+      </ContentWrapper>
       <Footer />
       <GlobalStyle />
     </>
@@ -64,13 +69,47 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url(${BgPoligons}), url(${BgPoligon});
+    background-repeat: no-repeat;
+    background-position-x: 24px, 190px;
+    background-position-y: 1210px, 6410px;
   }
 `;
 
-const AppWrapper = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1300px;
   min-width: 200px;
-  padding: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+  border-left: 0.65px solid #ffffff24;
+  border-right: 0.65px solid #ffffff24;
+  z-index: 2;
+`;
+
+const BackgroundLines = styled.div`
+  position: fixed;
+  width: 1300px;
+  height: 100vh;
+  border-left: 0.65px solid #ffffff24;
+  border-right: 0.65px solid #ffffff24;
+  margin-left: -200px;
+`;
+
+const BackgroundCenterLines = styled.div`
+  position: fixed;
+  width: 700px;
+  height: 100vh;
+  border-left: 0.65px solid #ffffff24;
+  border-right: 0.65px solid #ffffff24;
+  z-index: 1;
+`;
+
+const BackgroundCenterLine = styled.div`
+  position: fixed;
+  width: 0;
+  height: 100vh;
+  border-left: 0.65px solid #ffffff24;
+  z-index: 1;
 `;
