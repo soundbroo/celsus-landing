@@ -87,7 +87,6 @@ const ContentWrapper = styled.div`
   padding: 20px 0;
   border-left: 0.65px solid #ffffff24;
   border-right: 0.65px solid #ffffff24;
-  overflow-x: hidden;
   z-index: 2;
 `;
 

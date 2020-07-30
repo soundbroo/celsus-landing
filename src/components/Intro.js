@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Common/Button";
-import Bg from "../images/Robot.png";
+import Bg from "../images/Robot.webp";
 
 const Intro = () => (
   <IntroWrapper>
