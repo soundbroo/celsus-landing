@@ -55,6 +55,11 @@ const OrganizerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 120px;
+
+  @media (max-width: 1023px) {
+    margin-top: 72px;
+    padding: 0 20px;
+  }
 `;
 
 const Title = styled.div`
@@ -64,12 +69,28 @@ const Title = styled.div`
   letter-spacing: -0.03em;
   color: #ffffff;
   margin-bottom: 128px;
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
 `;
 
 const CelsusLink = styled.div`
   display: flex;
   align-items: center;
   margin-left: 40px;
+
+  @media (max-width: 1023px) {
+    margin: 0 12px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    > img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 const Link = styled.div`
@@ -78,6 +99,13 @@ const Link = styled.div`
   background: #253c50;
   border-radius: 8px;
   padding: 20px 30px;
+
+  @media (max-width: 1023px) {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
 
   > a {
     font-size: 24px;
@@ -104,6 +132,12 @@ const OrganizerDescription = styled.div`
   margin-top: 72px;
   max-width: 650px;
   align-self: flex-end;
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+    padding: 16px;
+    margin-top: 32px;
+  }
 `;
 
 const Facts = styled.div`
@@ -114,10 +148,22 @@ const Facts = styled.div`
   color: #ffffff;
   margin-top: 148px;
   margin-bottom: 112px;
+
+  @media (max-width: 1023px) {
+    margin-top: 40px;
+    margin-bottom: 32px;
+    flex-direction: column;
+  }
 `;
 
 const Fact = styled.div`
   max-width: 380px;
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
 
   > img {
     margin-bottom: 12px;
@@ -129,6 +175,10 @@ const Partners = styled.div`
   flex-direction: column;
   margin-bottom: 128px;
 
+  @media (max-width: 1023px) {
+    margin-bottom: 52px;
+  }
+
   > span {
     font-weight: bold;
     font-size: 24px;
@@ -137,6 +187,11 @@ const Partners = styled.div`
     text-transform: uppercase;
     color: #ffffff;
     margin-bottom: 85px;
+
+    @media (max-width: 1023px) {
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
   }
 
   > div {
@@ -144,11 +199,20 @@ const Partners = styled.div`
     justify-content: space-between;
     padding: 0 36px;
 
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
     > div {
       width: 196px;
       height: 85px;
       background: #e9edf0;
       border-radius: 8px;
+      @media (max-width: 1023px) {
+        margin: 20px 0;
+      }
     }
   }
 `;

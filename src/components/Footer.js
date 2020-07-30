@@ -4,6 +4,13 @@ import ContactsInfo from "./Common/ContactsInfo";
 import SubscribeIcon from "../images/SubscribeIcon.svg";
 import Button from "./Common/Button";
 
+const InputsBlock = () => (
+  <InputsBlockWrapper>
+    <EmailField type="text" placeholder="Email" />
+    <Button small>Подписаться</Button>
+  </InputsBlockWrapper>
+);
+
 const Footer = () => (
   <FooterWrapper>
     <FooterBlockWrapper>
@@ -15,6 +22,10 @@ const Footer = () => (
               Хочу получать уведомления о новостях, событиях и предложениях
             </MainText>
             <TimingText>(не чаще 3 раз в месяц)</TimingText>
+            <InputsBlock>
+              <EmailField type="text" placeholder="Email" />
+              <Button small>Подписаться</Button>
+            </InputsBlock>
             <PolicyText>
               Подписываясь на рассылку, вы соглашаетесь с Политикой
               конфиденциальности и даете согласие на использование файлов
@@ -59,6 +70,10 @@ const Subscription = styled.div`
   margin: auto;
   padding: 40px 20px;
   max-width: 1300px;
+
+  @media (max-width: 1023px) {
+    padding: 20px;
+  }
 `;
 
 const SubscriptionInfoWrapper = styled.div`
@@ -67,11 +82,19 @@ const SubscriptionInfoWrapper = styled.div`
   > img {
     align-self: baseline;
     margin-right: 32px;
+
+    @media (max-width: 1023px) {
+      margin-right: 12px;
+    }
   }
 `;
 
 const SubscriptionInfo = styled.div`
   max-width: 548px;
+
+  @media (max-width: 1023px) {
+    max-width: 100%;
+  }
 `;
 
 const MainText = styled.div`
@@ -80,6 +103,10 @@ const MainText = styled.div`
   line-height: 114%;
   color: #ffffff;
   margin-bottom: 8px;
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
 `;
 
 const TimingText = styled.div`
@@ -87,24 +114,64 @@ const TimingText = styled.div`
   line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
 `;
 
 const PolicyText = styled.div`
   font-size: 10px;
   line-height: 110%;
   color: rgba(255, 255, 255, 0.3);
+
+  @media (max-width: 1023px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 580px) {
+    margin-left: -48px;
+  }
 `;
 
 const Inputs = styled.div`
   display: flex;
   align-items: center;
+
+  @media (min-width: 1023px) {
+    display: flex;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+`;
+
+const InputsBlockWrapper = styled.div`
+  @media (max-width: 1023px) {
+    display: flex;
+    align-items: center;
+
+    > div:last-child {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    margin-left: -48px;
+  }
+
+  @media (min-width: 1023px) {
+    display: none;
+  }
 `;
 
 const EmailField = styled.input`
   background: rgba(255, 255, 255, 0.16);
   border-radius: 60px;
   border: none;
-  width: 275px;
+  max-width: 275px;
   height: 60px;
   font-size: 20px;
   line-height: 140%;
@@ -112,6 +179,13 @@ const EmailField = styled.input`
   padding-left: 24px;
   outline: none;
   margin-right: 10px;
+
+  @media (max-width: 1023px) {
+    font-size: 14px;
+    height: 100%;
+    padding: 16px 32px;
+    width: 100%;
+  }
 `;
 
 const Contacts = styled.div`
@@ -121,9 +195,18 @@ const Contacts = styled.div`
   max-width: 1300px;
   margin: auto;
   padding: 0 20px;
+
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
+
   > div {
     margin-top: 0;
     width: 100%;
+
+    @media (max-width: 1023px) {
+      justify-content: center;
+    }
   }
 `;
 
