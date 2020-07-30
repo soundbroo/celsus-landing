@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SpeakerCardQuotes from "../../images/SpeakerCardQuotes.svg";
+import SpeakerCardMobileQuotes from "../../images/SpeakerCardMobileQuotes.svg";
 
 const SpeakerCard = ({ avatar, name, position, items }) => (
   <SpeakerCardWrapper>
@@ -32,6 +33,10 @@ const SpeakerCardWrapper = styled.div`
   border-radius: 16px;
   max-width: 548px;
   margin-bottom: 12px;
+
+  @media (max-width: 700px) {
+    padding: 20px 16px;
+  }
 `;
 
 const SpeakerInfo = styled.div`
@@ -41,10 +46,16 @@ const SpeakerInfo = styled.div`
 `;
 
 const Avatar = styled.div`
-  width: 80px;
+  min-width: 80px;
   height: 80px;
   border-radius: 50px;
   background: #1c3245;
+
+  @media (max-width: 700px) {
+    min-width: 48px;
+    height: 48px;
+    margin-right: 20px;
+  }
 `;
 
 const Info = styled.div`
@@ -52,6 +63,10 @@ const Info = styled.div`
   flex-direction: column;
   margin: 0px 20px;
   max-width: 250px;
+
+  @media (max-width: 700px) {
+    margin: 0;
+  }
 `;
 
 const Name = styled.div`
@@ -60,6 +75,10 @@ const Name = styled.div`
   line-height: 140%;
   color: #ffffff;
   margin-bottom: 8px;
+
+  @media (max-width: 700px) {
+    font-size: 14px;
+  }
 `;
 
 const Position = styled.div`
@@ -67,12 +86,21 @@ const Position = styled.div`
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
+
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
 `;
 
 const ItemsList = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @media (max-width: 700px) {
+    font-size: 10px;
+    padding-left: 24px;
+  }
 
   &::before {
     content: "";
@@ -83,6 +111,15 @@ const ItemsList = styled.div`
     left: -42px;
     width: 48px;
     height: 48px;
+
+    @media (max-width: 700px) {
+      background: url(${SpeakerCardMobileQuotes});
+      background-repeat: no-repeat;
+      left: -9px;
+      top: 6px;
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &::after {
@@ -95,6 +132,15 @@ const ItemsList = styled.div`
     left: calc(100% - 54px);
     width: 48px;
     height: 48px;
+
+    @media (max-width: 700px) {
+      background: url(${SpeakerCardMobileQuotes});
+      background-repeat: no-repeat;
+      top: calc(100% - 28px);
+      left: calc(100% - 28px);
+      width: 32px;
+      height: 32px;
+    }
   }
 `;
 
@@ -104,6 +150,10 @@ const Item = styled.div`
   line-height: 125%;
   color: #ffffff;
   margin: 10px 0px;
+
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
 `;
 
 const Prefix = styled.div`
@@ -112,4 +162,8 @@ const Prefix = styled.div`
   background: #70d9ff;
   border-radius: 10px;
   margin: 10px 14px 10px 0;
+
+  @media (max-width: 700px) {
+    min-width: 8px;
+  }
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import EventCardDescription from "./EventCardDescription";
 
 const MOCK_SPEAKERS = [
   { avatar: null, firstName: "Сергей", lastName: "Скороходов" },
@@ -9,6 +10,12 @@ const MOCK_SPEAKERS = [
   { avatar: null, firstName: "Петр", lastName: "Островский" },
 ];
 
+const MobileCardDescription = () => (
+  <MobileCardDescriptionWrapper>
+    <EventCardDescription />
+  </MobileCardDescriptionWrapper>
+);
+
 const EventCard = () => (
   <EventCardWrapper>
     <LeftSide>
@@ -16,7 +23,10 @@ const EventCard = () => (
         <div>Предстоит</div>
         <div>12 августа 2020</div>
       </Date>
-      <Button small>Зарегистрироваться</Button>
+      <MobileCardDescription />
+      <Button small mobileFullWidth>
+        Зарегистрироваться
+      </Button>
       <Speakers>
         <SpeakersTitle>Спикеры:</SpeakersTitle>
         <SpeakersList>
@@ -32,16 +42,7 @@ const EventCard = () => (
         </SpeakersList>
       </Speakers>
     </LeftSide>
-    <RightSide>
-      <Title>Когда вечная молодость станет реальностью</Title>
-      <Description>
-        Pellentesque id mollis dolor. Ut euismod tortor non nisi molestie, at
-        accumsan ex posuere. Vestibulum at augue vehicula, commodo sem ac,
-        ornare ex. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Curabitur viverra dui a lectus
-        malesuada rhon...
-      </Description>
-    </RightSide>
+    <EventCardDescription />
   </EventCardWrapper>
 );
 
@@ -54,6 +55,32 @@ const EventCardWrapper = styled.div`
   padding: 48px 56px;
   margin-bottom: 12px;
   max-width: 1087px;
+
+  @media (max-width: 1023px) {
+    padding: 20px;
+  }
+`;
+
+const MobileCardDescriptionWrapper = styled.div`
+  @media (min-width: 1023px) {
+    display: none;
+  }
+
+  > div {
+    @media (max-width: 1023px) {
+      display: flex;
+      flex-direction: column;
+
+      > div:first-child {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      > div:last-child {
+        font-size: 12px;
+      }
+    }
+  }
 `;
 
 const Avatar = styled.div`
@@ -67,31 +94,20 @@ const Avatar = styled.div`
 const LeftSide = styled.div`
   flex: 3;
   padding-right: 20px;
-`;
 
-const RightSide = styled.div`
-  flex: 5;
-`;
-
-const Title = styled.div`
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 140%;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-  margin-bottom: 40px;
-`;
-
-const Description = styled.div`
-  font-size: 16px;
-  line-height: 160%;
-  color: rgba(255, 255, 255, 0.8);
+  @media (max-width: 1023px) {
+    padding-right: 0;
+  }
 `;
 
 const Date = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 16px;
+  }
 
   > div:first-child {
     color: #70d9ff;
@@ -114,6 +130,10 @@ const Speakers = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+
+  @media (max-width: 1023px) {
+    margin-top: 16px;
+  }
 `;
 
 const SpeakersTitle = styled.div`
@@ -132,7 +152,11 @@ const SpeakersListItem = styled.div`
   display: flex;
   align-items: center;
   margin-top: 26px;
-  width: 150px;
+  width: 50%;
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
 `;
 
 const Name = styled.div`

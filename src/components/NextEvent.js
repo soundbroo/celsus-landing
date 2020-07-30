@@ -34,7 +34,7 @@ const NextEvent = () => (
             at accumsan ex posuere. Vestibulum at augue vehicula, commodo sem
             ac, ornare ex, at accumsan ex posuere...
           </DescriptionText>
-          <Button>Зарегистрироваться</Button>
+          <Button mobileFullWidth>Зарегистрироваться</Button>
         </div>
       </Description>
     </Title>
@@ -64,10 +64,19 @@ const NextEventWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 170px;
+
+  @media (max-width: 1023px) {
+    margin-top: 80px;
+    padding: 20px;
+  }
 `;
 
 const Title = styled.div`
   display: flex;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
 `;
 
 const SpeakersTitle = styled.div`
@@ -75,6 +84,10 @@ const SpeakersTitle = styled.div`
   line-height: 140%;
   color: rgba(255, 255, 255, 0.55);
   margin-bottom: 28px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 12px;
+  }
 `;
 
 const Date = styled.div`
@@ -91,11 +104,19 @@ const Date = styled.div`
   align-self: flex-start;
   height: 208px;
 
+  @media (max-width: 1023px) {
+    height: 140px;
+  }
+
   > div:first-child {
     font-weight: bold;
     font-size: 76px;
     line-height: 140%;
     padding: 0 12px;
+
+    @media (max-width: 1023px) {
+      font-size: 48px;
+    }
   }
 
   > div:last-child {
@@ -106,12 +127,20 @@ const Date = styled.div`
       font-weight: 500;
       font-size: 29px;
       line-height: 140%;
+
+      @media (max-width: 1023px) {
+        font-size: 16px;
+      }
     }
 
     > span:last-child {
       font-size: 18px;
       font-weight: 300;
       line-height: 140%;
+
+      @media (max-width: 1023px) {
+        font-size: 12px;
+      }
     }
   }
 `;
@@ -123,6 +152,10 @@ const Name = styled.div`
   letter-spacing: -0.03em;
   color: #ffffff;
   max-width: 730px;
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+  }
 `;
 
 const Description = styled.div`
@@ -134,6 +167,11 @@ const Description = styled.div`
     display: flex;
     margin: 72px 0px;
     justify-content: space-between;
+
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      margin: 20px 0px;
+    }
 
     > div:last-child {
       height: fit-content;
@@ -147,6 +185,10 @@ const DescriptionText = styled.div`
   color: rgba(255, 255, 255, 0.8);
   max-width: 500px;
   margin-right: 72px;
+
+  @media (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const Speakers = styled.div`
@@ -159,6 +201,10 @@ const Speakers = styled.div`
 
     > div:first-child {
       margin-right: 12px;
+
+      @media (max-width: 1023px) {
+        margin-right: 0;
+      }
     }
   }
 `;

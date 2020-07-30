@@ -31,6 +31,11 @@ const AllEventsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 108px;
+
+  @media (max-width: 1023px) {
+    margin-top: 72px;
+    padding: 0 20px;
+  }
 `;
 
 const Title = styled.div`
@@ -40,11 +45,25 @@ const Title = styled.div`
   letter-spacing: -0.03em;
   color: #ffffff;
   margin-bottom: 48px;
+
+  @media (max-width: 1023px) {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
 `;
 
 const Sort = styled.div`
   display: flex;
   margin-bottom: 48px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 30px;
+
+    > div {
+      font-size: 12px;
+      padding: 16px 18px;
+    }
+  }
 `;
 
 const Events = styled.div`

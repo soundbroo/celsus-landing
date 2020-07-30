@@ -45,7 +45,7 @@ const ListItem = styled.div`
 
   @media (max-width: 1023px) {
     width: 50%;
-    margin-right: 0px;
+    margin: 16px 0px;
   }
 
   > div {
@@ -81,6 +81,6 @@ const Title = styled.div`
 
   @media (max-width: 1023px) {
     font-size: 24px;
-    margin: 72px 0 0 0;
+    margin: 72px 0 16px 0;
   }
 `;
