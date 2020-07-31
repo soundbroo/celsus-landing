@@ -196,7 +196,7 @@ const Contacts = styled.div`
   margin: auto;
   padding: 0 20px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 600px) {
     padding: 0;
   }
 
@@ -204,8 +204,13 @@ const Contacts = styled.div`
     margin-top: 0;
     width: 100%;
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1350px) {
+      padding: 0;
+    }
+
+    @media (max-width: 600px) {
       justify-content: center;
+      padding: 0;
     }
   }
 `;

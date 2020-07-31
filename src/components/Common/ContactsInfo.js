@@ -27,9 +27,16 @@ const ContactsInfoWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 46px;
-  padding: 0 20px;
+
+  @media (max-width: 1350px) {
+    padding: 0 20px;
+  }
 
   @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 600px) {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 0;

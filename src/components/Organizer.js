@@ -137,9 +137,13 @@ const OrganizerDescription = styled.div`
   align-self: flex-end;
 
   @media (max-width: 1023px) {
-    font-size: 12px;
+    font-size: 14px;
     padding: 16px;
     margin-top: 32px;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 12px;
   }
 `;
 
@@ -163,9 +167,13 @@ const Fact = styled.div`
   max-width: 380px;
 
   @media (max-width: 1023px) {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 100%;
     margin-bottom: 40px;
+
+    @media (max-width: 425px) {
+      font-size: 12px;
+    }
   }
 
   > img {

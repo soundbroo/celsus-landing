@@ -77,6 +77,12 @@ const MobileCardDescriptionWrapper = styled.div`
       }
 
       > div:last-child {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 425px) {
+      > div:last-child {
         font-size: 12px;
       }
     }

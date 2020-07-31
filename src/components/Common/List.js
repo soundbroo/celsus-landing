@@ -56,9 +56,13 @@ const ListItem = styled.div`
     margin-left: 40px;
 
     @media (max-width: 1023px) {
-      font-size: 10px;
+      font-size: 14px;
       margin-left: 6px;
       align-self: ${({ round }) => (!round ? "auto" : "baseline")};
+    }
+
+    @media (max-width: 425px) {
+      font-size: 10px;
     }
   }
 

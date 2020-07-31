@@ -191,6 +191,7 @@ const DescriptionText = styled.div`
 
   @media (max-width: 1023px) {
     margin-right: 0;
+    max-width: 100%;
   }
 `;
 
