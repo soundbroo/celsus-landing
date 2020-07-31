@@ -28,7 +28,7 @@ const ContactsInfoWrapper = styled.div`
   align-items: center;
   margin-top: 46px;
 
-  @media (max-width: 1350px) {
+  @media (max-width: 1350px) and (min-width: 599px) {
     padding: 0 20px;
   }
 

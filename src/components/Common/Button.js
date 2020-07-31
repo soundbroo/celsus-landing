@@ -37,4 +37,8 @@ const ButtonWrapper = styled.div`
     justify-content: center;
     padding: 16px 32px;
   }
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+  }
 `;

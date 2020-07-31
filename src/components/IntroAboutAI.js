@@ -56,7 +56,7 @@ const AboutCard = styled.div`
   background: #70d9ff;
   border-radius: 8px;
   padding: 40px;
-  max-width: 1075px;
+  max-width: 1118px;
   margin-top: 90px;
 
   @media (max-width: 1023px) {

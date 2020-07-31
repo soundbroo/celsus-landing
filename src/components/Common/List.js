@@ -40,7 +40,7 @@ const ListItem = styled.div`
   display: flex;
   align-items: center;
   margin: 32px 0px;
-  margin-right: 60px;
+  margin-right: ${({ round }) => (!round ? "60px" : "98px")};
   max-width: 500px;
 
   @media (max-width: 1023px) {
@@ -53,7 +53,7 @@ const ListItem = styled.div`
     line-height: 140%;
     color: #fff;
     max-width: 400px;
-    margin-left: 40px;
+    margin-left: ${({ round }) => (!round ? "40px" : "36px")};
 
     @media (max-width: 1023px) {
       font-size: 14px;

@@ -43,7 +43,6 @@ const TextWithButtons = styled.div`
   z-index: 2;
 
   @media (max-width: 1023px) {
-    padding-left: 20px;
     width: 100%;
   }
 `;
@@ -103,7 +102,7 @@ const Buttons = styled.div`
     margin-right: 12px;
 
     @media (max-width: 1023px) {
-      margin-right: 20px;
+      margin-right: 0;
     }
   }
 
