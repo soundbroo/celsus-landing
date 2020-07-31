@@ -29,9 +29,12 @@ const IntroAboutAIWrapper = styled.div`
   align-items: flex-start;
   margin-top: 150px;
 
+  @media (max-width: 1350px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 1023px) {
     margin-top: 64px;
-    padding: 0 20px;
   }
 `;
 

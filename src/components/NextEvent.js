@@ -65,9 +65,12 @@ const NextEventWrapper = styled.div`
   flex-direction: column;
   margin-top: 170px;
 
+  @media (max-width: 1350px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 1023px) {
     margin-top: 80px;
-    padding: 20px;
   }
 `;
 

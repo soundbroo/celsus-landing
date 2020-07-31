@@ -30,6 +30,10 @@ const IntroWrapper = styled.div`
   align-items: center;
   margin-top: 110px;
 
+  @media (max-width: 1350px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 1023px) {
     margin-top: 32px;
   }

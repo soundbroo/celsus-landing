@@ -56,9 +56,12 @@ const OrganizerWrapper = styled.div`
   flex-direction: column;
   margin-top: 120px;
 
+  @media (max-width: 1350px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 1023px) {
     margin-top: 72px;
-    padding: 0 20px;
   }
 `;
 

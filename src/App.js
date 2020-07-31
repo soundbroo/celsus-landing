@@ -88,6 +88,11 @@ const ContentWrapper = styled.div`
   border-left: 0.65px solid #ffffff24;
   border-right: 0.65px solid #ffffff24;
   z-index: 2;
+
+  @media (max-width: 1350px) {
+    border-left: none;
+    border-right: none;
+  }
 `;
 
 const BackgroundLines = styled.div`

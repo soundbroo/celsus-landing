@@ -30,12 +30,16 @@ const PlanIconsWrapper = styled.div`
   margin-top: 150px;
   flex-wrap: wrap;
 
+  @media (max-width: 1350px) {
+    padding: 0 20px;
+  }
+
   @media (max-width: 1023px) {
     margin-top: 56px;
   }
 
   @media (max-width: 780px) {
-    justify-content: center;
+    justify-content: space-around;
   }
 `;
 

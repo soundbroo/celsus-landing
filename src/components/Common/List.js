@@ -26,7 +26,7 @@ const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1350px) {
     padding: 0 20px;
   }
 `;
