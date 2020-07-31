@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Common/Button";
-import Bg from "../images/Robot.webp";
+import Bg from "../images/Robot.jpg";
 
 const Intro = () => (
   <IntroWrapper>
@@ -49,6 +49,7 @@ const Background = styled.img`
   right: -100px;
   width: calc(1000px + 8vw);
   z-index: 1;
+  border-radius: 9px;
 
   @media (max-width: 1023px) {
     right: -20px;
