@@ -84,6 +84,10 @@ const CelsusLink = styled.div`
   align-items: center;
   margin-left: 40px;
 
+  > img {
+    width: 300px;
+  }
+
   @media (max-width: 1023px) {
     margin: 0 12px;
     flex-direction: column;
@@ -98,7 +102,7 @@ const CelsusLink = styled.div`
 
 const Link = styled.div`
   position: relative;
-  margin-left: 200px;
+  margin-left: 312px;
   background: #253c50;
   border-radius: 8px;
   padding: 20px 30px;
@@ -133,6 +137,7 @@ const OrganizerDescription = styled.div`
   border-radius: 16px;
   padding: 32px;
   margin-top: 72px;
+  margin-right: 101px;
   max-width: 650px;
   align-self: flex-end;
 
@@ -140,6 +145,7 @@ const OrganizerDescription = styled.div`
     font-size: 14px;
     padding: 16px;
     margin-top: 32px;
+    margin-right: 0;
   }
 
   @media (max-width: 425px) {
@@ -164,11 +170,12 @@ const Facts = styled.div`
 `;
 
 const Fact = styled.div`
-  max-width: 380px;
+  padding-right: 15%;
+  height: 275px;
 
   @media (max-width: 1023px) {
     font-size: 14px;
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 40px;
 
     @media (max-width: 425px) {
